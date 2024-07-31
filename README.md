@@ -1,15 +1,3 @@
-
-## Table of Contents
-
-1. [Project Overview](#project-overview)
-2. [Data Sources](#data-sources)
-3. [Tools](#tools)
-4. [Data Cleaning/Preparatory](#data-cleaningpreparatory)
-5. [Explanatory Data Analysis](#explanatory-data-analysis)
-6. [Visualization](#visualization)
-7. [Codes](#codes)
-8. [Recommendations](#recommendations)
-
 ### Project Overview<a name="project-overview"></a>
 My project aims to analyze sales data of Superstore to gain insights into sales performance, customer behavior, and market trends. By leveraging data analytics, I seek to identify patterns and opportunities for optimization in business operations.
 ![superstore](https://github.com/zinnydigits/superstore/assets/53875635/b9c87afa-a76c-495e-bbec-d8bccdb9ab57)
