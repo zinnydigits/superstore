@@ -1,51 +1,44 @@
-### Project Overview<a name="project-overview"></a>
-My project aims to analyze sales data of Superstore to gain insights into sales performance, customer behavior, and market trends. By leveraging data analytics, I seek to identify patterns and opportunities for optimization in business operations.
-![superstore](https://github.com/zinnydigits/superstore/assets/53875635/b9c87afa-a76c-495e-bbec-d8bccdb9ab57)
+### Project Overview
+This project aims to analyze sales data of Superstore to gain insights into sales performance, customer behavior, and market trends. By leveraging data analytics, I seek to identify patterns and opportunities for optimization in business operations.
+![superstore](https://github.com/zinnydigits/superstore/blob/main/superstore.PNG)
 
-### Data Sources<a name="data-sources"></a>
+### Data Sources
 The data sources for my analysis is a dataset containing information on sales transactions, including categories, customers ID, customers name, orders, products, regions, segments etc. This dataset provides comprehensive information to analyze various aspects of sales performance and customer engagement.
-Click to download the [dataset](https://github.com/zinnydigits/superstore/blob/main/superstore_final_dataset%20(1).csv), and the [power BI file](https://github.com/zinnydigits/superstore/blob/main/superstore.pbix).
+Click to download the [dataset](https://github.com/zinnydigits/superstore/blob/main/superstore.xlsx), and the [power BI file](https://github.com/zinnydigits/superstore/blob/main/superstore.pbix).
 
-### Tools<a name="tools"></a>
+### Tools
 - Microsoft Excel: Used for data validation and verification to ensure dataset cleanliness.
-- DAX (Data Analysis Expressions): Used to create calculated columns, measures and performed advanced data manipulation within Power BI.
+- Power Query: Used to create calculate delivery duration for each order.
+- DAX: Used calculate product returns %
 - Power BI: Used for data visualization, analysis and reporting.
 
-### Data Cleaning/Preparatory<a name="data-cleaningpreparatory"></a>
+### Data Cleaning/Preparatory
 The dataset required no cleaning or manipulation as it was already clean upon inspection.
 
-### Visualization<a name="visualization"></a>
+### Visualization
 Visualizations created using Power BI include:
-- Total Sales: A card visualization displaying the total sales amount, no of Shipping, total no of customers and average delivery day.
+- Cards: To visualize total sales, total orders, total discount, total customer, product return %, and avg delivery days.
 - Sales Trend: A line chart showing sales trend over month.
-- Top Selling Products: A bar chart showing the top-selling products by product count and product sales
-- Customer Demographics: A pie chart showing customer distribution by segment.
-- Order Frequency: A histogram showing the distribution of order frequency.
-- A Doughnut chart displaying sales by product category.
-- A Pie Chart displaying sales by ship mode.
+- Column Chart: Used to visualize top customers by sales, top selling products by sales and total sales by week day.
+- Donut chart: Displaying profit by Region, Sales by Segment, and Sales by Ship Mode.
+- Slicer: Used to select years.
 
-### Codes<a name="codes"></a>
+### DAX
 ```
-weekday2 = SWITCH('superstore_final_dataset (1)'[weekday], 
-                    1, "Sunday", 
-                    2, "Monday",
-                    3, "Tuesday",
-                    4, "Wednesday",
-                    5, "Thursday",
-                    6, "Friday",
-                    7, "Saturday"
-)
+      product return % = COUNT(Orders[Order ID])/COUNT(Returns[Returned])         
 ```
 
-### Explanatory Data Analysis<a name="explanatory-data-analysis"></a>
-During the exploratory data analysis, I delved into the dataset to uncover patterns, and trends. 
-Below are the insights derived:
+### Explanatory Data Analysis
+Below are the insights derived from the exploratory data analysis:
 - Sales were always low beginning of the year and increases as the months go by.
 - Sales are extremely low on Thursday, and for some of the years, Friday.
 - Around 54 per cent of the Shipping are done via standard mode.
+- Delivery takes 4 days on average.
+- 2.96% of orders are returned.
+- 51% of sales are consumer product category.
+- West region brings the most profit which is 38% of total profit.
 
-### Recommendations<a name="recommendations"></a>
-Based on my analysis, I recommend:
+### Recommendations
 - Increased promotions and marketing efforts during December, the peak sales period.
 - Adjust inventory levels to avoid overstock during low-sales months like January and February.
 - Developed targeted sales strategies for Thursday and Friday.
